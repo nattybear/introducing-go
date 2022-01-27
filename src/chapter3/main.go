@@ -2,7 +2,12 @@ package main
 
 import "fmt"
 
+var x string = "Hello, World"
+
 func main() {
-  x := 5
+  fmt.Println(x)
+}
+
+func f() {
   fmt.Println(x)
 }
