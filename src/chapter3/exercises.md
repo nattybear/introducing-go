@@ -16,5 +16,7 @@ const
 > Constants are essentially variables whose values cannot be changed later.
 
 5. Using the example program as a starting point, write a program that converts from Fahrenheit into Celsius `(C = (F - 32) * 5/9)`.
+[87f5eff](https://github.com/nattybear/introducing-go/commit/87f5effaa6793cd284c66af8bf13623da519436a)
 
 6. Write another program that converts from feet into meters (`1ft = 0.3048m`).
+[9690dc9](https://github.com/nattybear/introducing-go/commit/9690dc98268e5446841fe3f535afafa4d3baf929)
