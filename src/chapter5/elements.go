@@ -4,15 +4,15 @@ import "fmt"
 
 func main() {
   elements := make(map[string]string)
-  elements["H"] = "Hydrogen"
+  elements["H"]  = "Hydrogen"
   elements["He"] = "Helium"
   elements["Li"] = "Lithium"
   elements["Be"] = "Beryllium"
-  elements["B"] = "Boron"
-  elements["C"] = "Carbon"
-  elements["N"] = "Nitogen"
-  elements["O"] = "Oxygen"
-  elements["F"] = "Fluorine"
+  elements["B"]  = "Boron"
+  elements["C"]  = "Carbon"
+  elements["N"]  = "Nitogen"
+  elements["O"]  = "Oxygen"
+  elements["F"]  = "Fluorine"
   elements["Ne"] = "Neon"
 
   if name, ok := elements["Un"]; ok {
