@@ -3,12 +3,12 @@ package main
 import "fmt"
 
 func main() {
-  x := [5]float64{
+  x := [4]float64{
     98,
     93,
     77,
     82,
-    83,
+    // 83,
   }
 
   var total float64 = 0
