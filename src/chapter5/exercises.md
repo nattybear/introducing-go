@@ -14,7 +14,7 @@ x[3]
 
 3. Given the following array, what would `x[2:5]` give you?
 
-``go
+```go
 x := [6]string{"a","b","c","d","e","f"}
 ```
 
