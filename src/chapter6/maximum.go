@@ -2,14 +2,23 @@ package main
 
 import "fmt"
 
-func maximum(xs ...int) (int) {
-  var max int
-  for i, v := range xs {
-    if i == 0 || v > max {
-      max = v
-    }
+func max(x, y int) int {
+  if x > y {
+    return x
+  } else {
+    return y
   }
-  return max
+}
+
+func maximum(xs ...int) (int) {
+  if len(xs) == 0 {
+    panic("empty list")
+  }
+  if len(xs) == 1 {
+    return xs[0]
+  } else {
+    return max(xs[0], maximum(xs[1:]...))
+  }
 }
 
 func main() {
