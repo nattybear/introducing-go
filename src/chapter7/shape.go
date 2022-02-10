@@ -10,6 +10,10 @@ type Circle struct {
   x, y, r float64
 }
 
+type Shape interface {
+  arae() float64
+}
+
 func distance(x1, y1, x2, y2 float64) float64 {
   a := x2 - x1
   b := y2 - y1
@@ -26,9 +30,16 @@ func (c *Circle) area() float64 {
   return math.Pi * c.r*c.r
 }
 
+func totalArea(circles ...Circle) float64 {
+  var total float64
+  for _, c := range circles {
+    total += c.area()
+  }
+  return total
+}
+
 func main() {
-  r := Rectangle{0, 0, 10, 10}
-  c := Circle{0, 0, 5}
-  fmt.Println(r.area())
-  fmt.Println(c.area())
+  c1 := Circle{0, 0, 5}
+  c2 := Circle{0, 0, 6}
+  fmt.Println(totalArea(c1, c2))
 }
