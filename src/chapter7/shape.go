@@ -34,6 +34,14 @@ func (c *Circle) area() float64 {
   return math.Pi * c.r*c.r
 }
 
+func (m *MultiShape) area() float64 {
+  var area float64
+  for _, s := range m.shapes {
+    area += s.area()
+  }
+  return area
+}
+
 func totalArea(shapes ...Shape) float64 {
   var area float64
   for _, s := range shapes {
@@ -43,7 +51,11 @@ func totalArea(shapes ...Shape) float64 {
 }
 
 func main() {
-  c := Circle{0, 0, 5}
-  r := Rectangle{1,1,2,2}
-  fmt.Println(totalArea(&c, &r))
+  multiShape := MultiShape{
+    shapes: []Shape{
+      Circle{0, 0, 5},
+      Rectangle{0, 0, 10, 10},
+    },
+  }
+  fmt.Println(multiShape.area())
 }
