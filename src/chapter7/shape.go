@@ -6,6 +6,10 @@ type Rectangle struct {
   x1, y1, x2, y2 float64
 }
 
+type Circle struct {
+  x, y, r float64
+}
+
 func distance(x1, y1, x2, y2 float64) float64 {
   a := x2 - x1
   b := y2 - y1
@@ -18,11 +22,13 @@ func (r *Rectangle) area() float64 {
   return l * w
 }
 
-func circleArea(x, y, r float64) float64 {
-  return math.Pi * r*r
+func (c *Circle) area() float64 {
+  return math.Pi * c.r*c.r
 }
 
 func main() {
   r := Rectangle{0, 0, 10, 10}
+  c := Circle{0, 0, 5}
   fmt.Println(r.area())
+  fmt.Println(c.area())
 }
