@@ -30,7 +30,7 @@ func (c *Circle) area() float64 {
   return math.Pi * c.r*c.r
 }
 
-func totalArea(circles ...Circle, rectangles ...Rectangle) float64 {
+func totalArea(circles []Circle, rectangles []Rectangle) float64 {
   var total float64
   for _, c := range circles {
     total += c.area()
@@ -42,7 +42,13 @@ func totalArea(circles ...Circle, rectangles ...Rectangle) float64 {
 }
 
 func main() {
-  c1 := Circle{0, 0, 5}
-  c2 := Circle{0, 0, 6}
-  fmt.Println(totalArea(c1, c2))
+  circles := []Circle{
+    Circle{0, 0, 5},
+    Circle{0, 0, 6},
+  }
+  rectangles := []Rectangle{
+    Rectangle{1,1,2,2},
+    Rectangle{2,2,3,3},
+  }
+  fmt.Println(totalArea(circles, rectangles))
 }
