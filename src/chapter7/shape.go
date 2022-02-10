@@ -12,6 +12,7 @@ type Circle struct {
 
 type Shape interface {
   area() float64
+  perimeter() float64
 }
 
 type MultiShape struct {
@@ -30,8 +31,18 @@ func (r *Rectangle) area() float64 {
   return l * w
 }
 
+func (r *Rectangle) perimeter() float64 {
+  l := r.x2 - r.x1
+  w := r.y2 - r.y1
+  return 2 * (l + w)
+}
+
 func (c *Circle) area() float64 {
   return math.Pi * c.r*c.r
+}
+
+func (c *Circle) perimeter() float64 {
+  return 2 * math.Pi * c.r
 }
 
 func (m *MultiShape) area() float64 {
