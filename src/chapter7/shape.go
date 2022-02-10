@@ -30,10 +30,13 @@ func (c *Circle) area() float64 {
   return math.Pi * c.r*c.r
 }
 
-func totalArea(circles ...Circle) float64 {
+func totalArea(circles ...Circle, rectangles ...Rectangle) float64 {
   var total float64
   for _, c := range circles {
     total += c.area()
+  }
+  for _, r := range rectangles {
+    total += r.area()
   }
   return total
 }
