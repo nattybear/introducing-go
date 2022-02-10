@@ -53,8 +53,8 @@ func totalArea(shapes ...Shape) float64 {
 func main() {
   multiShape := MultiShape{
     shapes: []Shape{
-      Circle{0, 0, 5},
-      Rectangle{0, 0, 10, 10},
+      &Circle{0, 0, 5},
+      &Rectangle{0, 0, 10, 10},
     },
   }
   fmt.Println(multiShape.area())
